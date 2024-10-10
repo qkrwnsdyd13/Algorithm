@@ -1,24 +1,22 @@
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
 
-        int N = sc.nextInt();
-        int a[] = new int[N];
-        int sum = 0;
-        
-        for ( int i = 0; i < N; i++ ) {
-            a[i] = sc.nextInt();
-        }
-        
-        int v = sc.nextInt();
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		int[] a = new int[n];
+		for (int i = 0; i < n; i++) {
+			a[i] = sc.nextInt();
+		}
+		int v = sc.nextInt();
+		int cnt = 0;
+		for (int i = 0; i < n; i++) {
+			if ( a[i] == v ) {
+				cnt++;
+			}
+		}
+		System.out.println(cnt);
+	}
 
-        for ( int i = 0; i < N; i++ ) {
-            if (v == a[i]) {
-                sum += 1;
-            }
-        }
-        System.out.println(sum);
-    }
 }
