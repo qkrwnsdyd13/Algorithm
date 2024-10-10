@@ -5,20 +5,22 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         int N = sc.nextInt();
-        int a[] = new int[N];
+        int max, min;
 
-        int max = -1000000;
-        int min = 1000000;
-        
-        for ( int i = 0; i < N; i++ ) {
-            a[i] = sc.nextInt();
-            if ( a[i] >= max) {
-                max = a[i];
+        int first = sc.nextInt();
+        max = first;
+        min = first;
+
+        for (int i = 1; i < N; i++) {
+            int num = sc.nextInt();
+            if (num > max) {
+                max = num;
             }
-            if ( a[i] <= min) {
-                min = a[i];
+            if (num < min) {
+                min = num;
             }
         }
+
         System.out.println(min + " " + max);
     }
 }
