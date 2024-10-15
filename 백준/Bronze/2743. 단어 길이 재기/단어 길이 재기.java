@@ -1,11 +1,18 @@
+
 import java.util.Scanner;
 
-public class Main {
+public class Main{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		String s = sc.nextLine();
-		System.out.println(s.length());
-	}
+        String S = sc.nextLine();
 
+        int sum = 0;
+
+        for (int i = 0; i < S.length(); i++) {
+            sum += 1;
+        }
+        
+        System.out.println(sum);
+    }
 }
